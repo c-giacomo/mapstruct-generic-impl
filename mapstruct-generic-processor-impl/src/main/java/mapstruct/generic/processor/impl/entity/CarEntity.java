@@ -1,4 +1,4 @@
-package mapstruct.custom.processor.impl.entity;
+package mapstruct.generic.processor.impl.entity;
 
 import lombok.Getter;
 import lombok.Setter;

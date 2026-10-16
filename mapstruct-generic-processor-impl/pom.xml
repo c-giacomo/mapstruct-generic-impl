@@ -8,11 +8,11 @@
         <version>4.1.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>mapstruct.custom.processor.impl</groupId>
-    <artifactId>mapstruct-custom-processor-impl</artifactId>
+    <groupId>mapstruct.generic.processor.impl</groupId>
+    <artifactId>mapstruct-generic-processor-impl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mapstruct-custom-processor-impl</name>
-    <description>mapstruct-custom-processor-impl</description>
+    <name>mapstruct-generic-processor-impl</name>
+    <description>mapstruct-generic-processor-impl</description>
     <url/>
     <licenses>
         <license/>
@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>com.generic.mapper</groupId>
-            <artifactId>generic-map</artifactId>
+            <artifactId>mapstruct-generic-processor</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>

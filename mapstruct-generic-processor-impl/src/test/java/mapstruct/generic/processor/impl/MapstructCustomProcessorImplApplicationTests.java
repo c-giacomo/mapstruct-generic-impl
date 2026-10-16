@@ -1,9 +1,9 @@
-package mapstruct.custom.processor.impl;
+package mapstruct.generic.processor.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import mapstruct.custom.processor.impl.dto.Car;
-import mapstruct.custom.processor.impl.entity.CarEntity;
-import mapstruct.custom.processor.impl.mapper.GenericBeansMapper;
+import mapstruct.generic.processor.impl.dto.Car;
+import mapstruct.generic.processor.impl.entity.CarEntity;
+import mapstruct.generic.processor.impl.mapper.GenericBeansMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
