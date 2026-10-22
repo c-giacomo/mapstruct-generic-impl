@@ -6,9 +6,13 @@ import com.generic.mapper.annotation.Pojo;
 import mapstruct.generic.processor.impl.dto.Car;
 import mapstruct.generic.processor.impl.entity.CarEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 @Pojo
 @Mapper(componentModel = "spring")
 public interface CarMapper extends BaseMapper<CarEntity, Car> {
+
+    @Mapping(target = "id", ignore = true)
+    Car customTransform(CarEntity carEntity);
 
 }

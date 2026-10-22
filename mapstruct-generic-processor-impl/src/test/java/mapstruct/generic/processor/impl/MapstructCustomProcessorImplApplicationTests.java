@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @Slf4j
 @SpringBootTest
@@ -42,6 +43,30 @@ class MapstructCustomProcessorImplApplicationTests {
 
         carEntity = mapper.aggiorna(car, carEntity);
         assertEquals("Ferrari", carEntity.getName());
+    }
+
+    @Test
+    void fromEntityToDto() {
+        CarEntity carEntity = new CarEntity();
+        carEntity.setId(1);
+        carEntity.setName("Ferrari");
+
+        Car car = mapper.serializza(carEntity, Car.class);
+        assertEquals(1, (int) car.getId());
+        assertEquals("Ferrari", car.getName());
+    }
+
+    @Test
+    void fromEntityToDtoCustom() {
+        CarEntity carEntity = new CarEntity();
+        carEntity.setId(1);
+        carEntity.setName("Ferrari");
+
+        assertEquals(1, (int) carEntity.getId());
+        assertEquals("Ferrari", carEntity.getName());
+
+        Car car = mapper.invoke("customTransform", carEntity, Car.class);
+        assertNull(car.getId());
     }
 
 }
