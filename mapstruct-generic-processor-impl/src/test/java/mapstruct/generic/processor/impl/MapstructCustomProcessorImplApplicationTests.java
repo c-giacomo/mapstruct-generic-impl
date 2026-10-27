@@ -69,4 +69,18 @@ class MapstructCustomProcessorImplApplicationTests {
         assertNull(car.getId());
     }
 
+    @Test
+    void abstractMapperCustomMap() {
+        CarEntity carEntity = new CarEntity();
+        carEntity.setId(1);
+        carEntity.setName("Ferrari");
+
+        assertEquals(1, (int) carEntity.getId());
+        assertEquals("Ferrari", carEntity.getName());
+
+        Car car = mapper.invoke("customMapping", carEntity, Car.class);
+        assertEquals(1, car.getId());
+        assertEquals("Ferrari", car.getName());
+    }
+
 }
